@@ -1,10 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide: Chapter 6 - Moore's Law and More</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 20px; background-color: #f4f7f6; }
+        .container { background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 3px solid #2c3e50; color: #2c3e50; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #eee; }
+        h3 { color: #16a085; }
+        .intro-box { background: #e8f4f8; border-left: 5px solid #2980b9; padding: 15px; margin-bottom: 25px; font-style: italic; }
+        .vocab-item { margin-bottom: 20px; }
+        .vocab-term { font-weight: bold; color: #d35400; font-size: 1.1em; }
+        .source-link { color: #3498db; text-decoration: none; font-weight: bold; font-size: 0.9em; }
+        .source-link:hover { text-decoration: underline; }
+        .model-list { background: #fdfefe; border: 1px solid #dcdde1; padding: 20px; border-radius: 8px; list-style-type: none; }
+        .model-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .model-list li::before { content: "→"; position: absolute; left: 0; color: #16a085; }
+        .quiz-container { background: #2c3e50; color: #ecf0f1; padding: 25px; border-radius: 8px; margin-top: 30px; }
+        .question { font-weight: bold; margin-bottom: 15px; color: #f1c40f; }
+        .options { list-style-type: none; padding-left: 0; margin-bottom: 25px; }
+        .options li { background: rgba(255,255,255,0.1); margin-bottom: 8px; padding: 10px; border-radius: 4px; transition: 0.3s; }
+        .options li:hover { background: rgba(255,255,255,0.2); }
+        hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my new GitHub Pages site.</p>
+
+<div class="container">
+    <h1>Chapter 6 Study Guide: Moore’s Law and More</h1>
+
+    <div class="intro-box">
+        This chapter covers the physical "engine" of the modern economy. We aren't just looking at chips and wires; we are looking at how the shrinking size and cost of hardware fundamentally change how businesses compete, plan, and manage environmental impact.
+    </div>
+
+    <h2>1. The Core Engine: Moore’s Law & Microprocessors</h2>
+    <div class="vocab-item">
+        <p><span class="vocab-term">Moore’s Law:</span> An economic observation by Gordon Moore (co-founder of Intel) that the number of transistors on a chip doubles roughly every two years.</p>
+        <ul>
+            <li><strong>The Business Impact:</strong> Computing power doubles for the same price, or the price halves for the same power. This predictability allows managers to plan for future capabilities that aren't technically possible today.</li>
+            <li><strong>Microprocessor:</strong> Often called the <strong>CPU</strong> (Central Processing Unit). The "brain" of the device that executes software instructions.</li>
+        </ul>
+        <a href="https://ieeexplore.ieee.org/document/658762" class="source-link" target="_blank">[Source]</a>
+    </div>
+
+    <h2>2. The "Data Kitchen" Analogy</h2>
+    <p>Distinguish between processing, memory, and storage by imagining a professional kitchen:</p>
+    <div class="vocab-item">
+        <ul>
+            <li><strong>The CPU (Microprocessor) = The Chef.</strong> The faster the chef, the faster the "data meal" is prepared.</li>
+            <li><strong>RAM (Volatile Memory) = The Counter Space.</strong> The immediate workspace. If the counter is tiny, the chef must constantly run to the pantry, slowing down production. <strong>Volatile</strong> means when the power is cut, the counter is wiped clean.</li>
+            <li><strong>Hard Drive/Flash (Non-Volatile Storage) = The Pantry.</strong> Long-term storage. <strong>Non-volatile</strong> means items remain even without power.</li>
+        </ul>
+        <a href="https://www.sciencedirect.com/topics/engineering/nonvolatile-memory" class="source-link" target="_blank">[Source]</a>
+    </div>
+
+    <h2>3. Konana’s Model of the Software Ecosystem</h2>
+    <p>Hardware sits at the bottom of a "stack." This interdependence means a change in Layer 1 (Hardware) can force a company to upgrade its entire software suite.</p>
+    <ul class="model-list">
+        <li><strong>Layer 1: Hardware:</strong> The physical foundation (CPU, RAM).</li>
+        <li><strong>Layer 2: Operating System (OS):</strong> The "Manager" (Windows, iOS). Controls hardware and interacts with the user.</li>
+        <li><strong>Layer 3: Database:</strong> Where information is organized and stored.</li>
+        <li><strong>Layer 4: Middleware:</strong> The "Glue" allowing different software programs to communicate.</li>
+        <li><strong>Layer 5: Application Software:</strong> The "User Layer" (Spotify, Excel).</li>
+    </ul>
+
+    <h2>4. Economics: Price Elasticity & The IoT</h2>
+    <p><strong>Price Elasticity of Demand</strong> measures how demand shifts when price changes. Tech is <strong>highly elastic</strong>.</p>
+    <div class="vocab-item">
+        <ul>
+            <li><strong>Internet of Things (IoT):</strong> Low-cost sensors and processors embedded in everyday objects (lightbulbs, jet engines) to communicate data.</li>
+            <li><strong>The Disney MagicBand:</strong> A $1 billion IoT investment. The real value is <strong>predictive analytics</strong>—knowing when to redirect staff to crowded areas to maximize guest satisfaction and spending.</li>
+        </ul>
+    </div>
+
+    <h2>5. The Environmental Cost: eWaste</h2>
+    <div class="vocab-item">
+        <p><span class="vocab-term">eWaste:</span> Discarded electronic devices containing toxic materials like lead, cadmium, and mercury.</p>
+        <p><strong>Managerial Concern:</strong> Firms face "reputational risk" and regulatory fines when hardware ends up in open-air burning pits in developing nations.</p>
+        <a href="https://www.epa.gov/international-cooperation/cleaning-e-waste" class="source-link" target="_blank">[Source]</a>
+    </div>
+
+    <hr>
+
+    <h2>Chapter 6 Quiz (Advanced)</h2>
+    <div class="quiz-container">
+        <div class="question">1. A manager is deciding between upgrading the RAM or the CPU. If the primary complaint is that computers "freeze up" only when twenty different programs are open at once, which component is the likely bottleneck?</div>
+        <ul class="options">
+            <li>A. The Chef (CPU), because he cannot cook twenty meals at once.</li>
+            <li>B. The Pantry (Non-volatile storage), because it is too far from the kitchen.</li>
+            <li>C. The Counter Space (Volatile memory), because it is too small to hold all active tasks.</li>
+            <li>D. The Middleware, because the programs cannot talk to each other.</li>
+        </ul>
+
+        <div class="question">2. Which of the following best describes the relationship between Moore's Law and Price Elasticity?</div>
+        <ul class="options">
+            <li>A. As chip density increases, the price becomes inelastic because consumers must have the latest tech.</li>
+            <li>B. Falling costs of microprocessors trigger an explosion in demand for new categories of devices, like smart home sensors.</li>
+            <li>C. The demand for high-end servers is perfectly elastic, meaning Moore's Law has no effect on total revenue.</li>
+            <li>D. Price elasticity dictates the physical limit of how many transistors fit on a wafer.</li>
+        </ul>
+
+        <div class="question">3. In Konana’s Model, if a company switches their Database from Oracle to an open-source alternative, which layer is most likely to require significant custom "Glue" coding to ensure applications still function?</div>
+        <ul class="options">
+            <li>A. Layer 1: Hardware</li>
+            <li>B. Layer 2: Operating System</li>
+            <li>C. Layer 4: Application Software</li>
+            <li>D. Layer 4: Middleware</li>
+        </ul>
+
+        <div class="question">4. Why is the impact of eWaste considered a "strategic" issue for a CEO, rather than just an operational one?</div>
+        <ul class="options">
+            <li>A. Toxic materials in eWaste can be harvested to build new chips at lower cost.</li>
+            <li>B. It directly influences the price elasticity of the company’s primary products.</li>
+            <li>C. It involves long-term brand equity, potential regulatory fines, and ethical management of the global supply chain.</li>
+            <li>D. eWaste is the primary driver of Moore's Law.</li>
+        </ul>
+
+        <div class="question">5. How does "Parallel Computing" differ from traditional computing in addressing the physical limits of Moore's Law?</div>
+        <ul class="options">
+            <li>A. It shrinks the size of transistors further than current physics allows.</li>
+            <li>B. It increases the "clock speed" of a single processor to infinite levels.</li>
+            <li>C. It divides complex problems into smaller tasks processed simultaneously by multiple chips.</li>
+            <li>D. It replaces volatile memory with non-volatile storage to increase speed.</li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
