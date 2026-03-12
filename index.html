@@ -39,100 +39,112 @@
         
         .source-tag { font-size: 0.85rem; color: #64748b; text-decoration: none; font-weight: 600; }
         .source-tag:hover { color: var(--primary); text-decoration: underline; }
+
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f1f5f9; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>Chapter 6: Moore’s Law & More</h1>
+    <h1>Chapter 6: Moore’s Law & Hardware</h1>
     
-    <p>Think of this chapter as the <strong>"Physical Foundation."</strong> Everything in business—from TikTok trends to AI trading—depends on the fact that hardware gets faster and cheaper at a predictable rate. If this engine stops, the software world stalls.</p>
+    <p>This chapter explores how <strong>Exponential Growth</strong> in hardware creates massive disruptive opportunities for managers[cite: 13, 51]. While we are hitting the physical limits of shrinking transistors, AI capabilities are now doubling every 6 months[cite: 35, 36].</p>
 
-    <h2>1. The Engine: Moore’s Law</h2>
-    <p>Back in 1965, Gordon Moore noticed that we could fit twice as many transistors on a chip every two years. 
-    <br><br>
-    <strong>Why should you care?</strong> It’s a "Manager’s Cheat Code." It means that if a project is too expensive or slow today, it might be perfectly viable in 24 months. It’s why your smartphone is more powerful than the computers that sent humans to the moon.</p>
-    <a href="https://ieeexplore.ieee.org/document/658762" class="source-tag" target="_blank">[Source]</a>
+    <h2>1. The Core Concepts</h2>
+    <ul>
+        <li><strong>Moore’s Law:</strong> Not a law of physics, but a business plan observation that the number of transistors on a chip doubles every 18 months[cite: 21, 26].</li>
+        <li><strong>Semiconductors:</strong> Materials that conduct electricity under certain conditions and inhibit it under others[cite: 90]. They are the foundation of modern electronics[cite: 93].</li>
+        <li><strong>The Fab:</strong> A multi-billion dollar facility used to manufacture chips. A single plant can cost $20+ billion and requires massive, ultra-purified water infrastructure[cite: 154, 156, 162].</li>
+    </ul>
 
     <div class="analogy">
-        <h3>🍳 The "Data Kitchen" Analogy</h3>
-        <p>If you want to understand how a computer actually works, imagine a kitchen:</p>
+        <h3>🍳 How a Computer Works: The Data Kitchen</h3>
+        <p>Think of your hardware as a workspace[cite: 75]:</p>
         <ul>
-            <li><strong>The CPU (Chef):</strong> The one doing the actual work. A "faster" CPU is just a faster chef.</li>
-            <li><strong>RAM (Counter Space):</strong> This is <strong>Volatile</strong>. It’s where the chef preps the meal. If the counter is small, the chef is slow because they can only work on one thing at a time. Turn off the lights (power), and the counter is wiped clean.</li>
-            <li><strong>Storage (The Pantry):</strong> This is <strong>Non-Volatile</strong>. It’s where the ingredients stay long-term. Even if you go home for the night, the food stays in the pantry.</li>
+            <li><strong>CPU (The Chef):</strong> Runs the computer using software "recipes"[cite: 76, 81].</li>
+            <li><strong>Main Memory (The Workspace):</strong> RAM is the immediate space where the chef works. It is <strong>Volatile</strong> (wipes clean when power is lost)[cite: 77, 79].</li>
+            <li><strong>Storage (The Pantry):</strong> Where recipes and data are kept long-term. It is <strong>Non-Volatile</strong>[cite: 77, 80].</li>
+            <li><strong>I/O Devices (Receiving/Shipping):</strong> How data enters or leaves the kitchen (keyboards, monitors)[cite: 78, 85].</li>
         </ul>
-        <a href="https://www.sciencedirect.com/topics/engineering/nonvolatile-memory" class="source-tag" target="_blank">[Source]</a>
-    </div>
+            </div>
 
     <h2>2. Konana’s Software Ecosystem</h2>
-    <p>Software isn't just one "thing." It’s a layered stack. If you change the bottom layer, the top layers might break. This is why IT upgrades are so stressful for companies.</p>
-    
+    <p>Strategic decisions must consider <strong>ecosystem entrenchment</strong>. Because each layer depends on the ones below it, this creates "Lock-in" or high switching costs[cite: 61, 63, 70, 72].</p>
     <div class="stack">
-        <div class="stack-item"><strong>Layer 5: Applications</strong> (The apps you use, like Excel or Spotify)</div>
-        <div class="stack-item"><strong>Layer 4: Middleware</strong> (The "glue" that lets apps talk to each other)</div>
-        <div class="stack-item"><strong>Layer 3: Database</strong> (The organized digital filing cabinet)</div>
-        <div class="stack-item"><strong>Layer 2: Operating System</strong> (The boss; Windows/macOS)</div>
-        <div class="stack-item"><strong>Layer 1: Hardware</strong> (The physical chips and wires)</div>
+        <div class="stack-item"><strong>Layer 6: Consumer Applications</strong> (Apps you use daily) [cite: 69]</div>
+        <div class="stack-item"><strong>Layer 5: Enterprise Applications</strong> (Large scale business software) [cite: 68]</div>
+        <div class="stack-item"><strong>Layer 4: Middleware</strong> (The software that connects apps) [cite: 67]</div>
+        <div class="stack-item:"><strong>Layer 3: DBMS</strong> (The Database Management System) [cite: 66]</div>
+        <div class="stack-item"><strong>Layer 2: Operating System</strong> (The hardware manager) [cite: 65]</div>
+        <div class="stack-item"><strong>Layer 1: Hardware</strong> (The physical foundation) [cite: 64]</div>
     </div>
 
-    <h2>3. The IoT & "Price Elasticity"</h2>
-    <p>In economics, <strong>Price Elasticity</strong> means: "If the price drops, will people buy way more?" 
-    <br><br>
-    For tech, the answer is a massive <strong>YES</strong>. Because chips became so cheap (Moore's Law), we started putting them in lightbulbs, heart monitors, and dog collars. This is the <strong>Internet of Things (IoT)</strong>.
-    <br><br>
-    <strong>The Disney Example:</strong> Disney’s MagicBands are an IoT masterpiece. They aren't just for opening doors; they allow Disney to track crowd flow in real-time. If a line gets too long, they can send a parade or a character to a different area to move the crowd. That's data-driven management.</p>
+    <h2>3. Capacity vs. Transfer Speed</h2>
+    <p><strong>The Golden Rule:</strong> 8 bits = 1 byte[cite: 249].</p>
+    <ul>
+        <li><strong>Storage:</strong> Measured in Bytes (Capital B). Example: 1 Gigabyte (GB) is one billion bytes[cite: 134, 135, 250].</li>
+        <li><strong>Transfer:</strong> Measured in bits (lowercase b). Internet speeds are Megabits per second (Mbps)[cite: 251, 252].</li>
+        <li><strong>The "Gotcha":</strong> Your download speed in Megabytes will always look 8 times smaller than the Megabits your ISP promised[cite: 254, 255].</li>
+    </ul>
 
-    <h2>4. The Dark Side: eWaste</h2>
-    <p>Since we get new, faster phones every two years, the old ones have to go somewhere. <strong>eWaste</strong> is a massive environmental crisis. These devices are full of toxic heavy metals. 
-    <br><br>
-    <strong>Managerial Tip:</strong> Companies that don't recycle properly face huge "reputational risk." Nobody wants to see their company logo on a laptop being burned in a toxic pit on the news.</p>
-    <a href="https://www.epa.gov/international-cooperation/cleaning-e-waste" class="source-tag" target="_blank">[Source]</a>
+    <h2>4. Bandwidth vs. Latency</h2>
+    <ul>
+        <li><strong>Bandwidth:</strong> Think of this as the number of lanes on a highway. More lanes = more data at once[cite: 264, 265].</li>
+        <li><strong>Latency:</strong> Think of this as the speed limit or delay. It is the time it takes for a single "car" to get from A to B[cite: 266].</li>
+        <li><strong>Management Rule:</strong> Video streaming needs high bandwidth, but online gaming and Instapolls require low latency (speed of response)[cite: 280, 281, 282].</li>
+    </ul>
+
+    <h2>5. Disney’s Big Data Strategy</h2>
+    <p>Disney used IoT (MagicBands) to solve complex operational problems[cite: 393]:</p>
+    <ul>
+        <li><strong>Operational Efficiency:</strong> They cut turnstile transaction time by 30%[cite: 431].</li>
+        <li><strong>Staffing:</strong> Data tells them exactly how many costumed characters or staff are needed in different parts of the park[cite: 429, 430].</li>
+        <li><strong>Capacity:</strong> They can now serve 3,000 to 5,000 additional guests per day because of efficient scheduling algorithms[cite: 423, 432].</li>
+    </ul>
 
     <div class="quiz-section">
-        <h2>Self-Check Quiz</h2>
-        <p style="color: #cbd5e1; font-size: 0.9rem;">Click an answer to check your knowledge!</p>
-
-        <div class="question">1. A designer complains that their computer "stutters" only when they have Photoshop, Chrome, and Slack open at the same time. What should you upgrade?</div>
+        <h2>Interactive Self-Check</h2>
+        <div class="question">1. Which of the following is measured in bits (lowercase b) rather than Bytes?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, false, 'The CPU is fine, the problem is the counter space!')">The CPU (The Chef)</button>
-            <button class="opt" onclick="check(this, true, 'Correct! You need more counter space (RAM) to handle multiple tasks.')">The RAM (The Counter Space)</button>
-            <button class="opt" onclick="check(this, false, 'The Pantry is for storage, not active speed.')">The Hard Drive (The Pantry)</button>
+            <button class="opt" onclick="check(this, false, 'Storage is measured in Bytes.')">The size of a DVD movie</button>
+            <button class="opt" onclick="check(this, true, 'Correct! Data transfer speeds like Wi-Fi or HDMI use bits.')">The transfer speed of your Wi-Fi</button>
+            <button class="opt" onclick="check(this, false, 'Files on a hard drive use Bytes.')">A photo file size</button>
         </div>
 
-        <div class="question">2. Why does Moore's Law lead to the "Internet of Things"?</div>
+        <div class="question">2. Why does Konana’s Ecosystem model create "switching costs"?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, false, 'No, the internet is a separate infrastructure.')">Because the internet is getting faster.</button>
-            <button class="opt" onclick="check(this, true, 'Correct! Falling prices make it cheap enough to put chips in everyday objects.')">Falling chip prices make it affordable to put "brains" in objects like lightbulbs.</button>
-            <button class="opt" onclick="check(this, false, 'Software is Layer 5, Moore\'s law is Layer 1.')">Because software is getting easier to write.</button>
+            <button class="opt" onclick="check(this, true, 'Correct! Because layers depend on those beneath them, changing one often requires changing all of them.')">Because each layer depends on the one beneath it, creating lock-in.</button>
+            <button class="opt" onclick="check(this, false, 'Moore\'s Law affects price, but the ecosystem affects compatibility.')">Because hardware is getting more expensive due to Moore\'s Law.</button>
+            <button class="opt" onclick="check(this, false, 'Switching costs are about software/hardware dependency, not eWaste.')">Because it is illegal to throw away old software.</button>
         </div>
 
-        <div class="question">3. You switch your company's Database software. Based on Konana's model, which layer are you most likely to have compatibility issues with?</div>
+        <div class="question">3. If your Internet Service Provider (ISP) promises 800 Mbps, what is your maximum actual download speed in Megabytes?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, false, 'Hardware is usually independent of specific databases.')">Hardware</button>
-            <button class="opt" onclick="check(this, true, 'Correct! The Application sits above the Database and relies on it.')">Application Software</button>
-            <button class="opt" onclick="check(this, false, 'The OS manages the hardware, the database sits above it.')">Operating System</button>
+            <button class="opt" onclick="check(this, false, 'You must divide by 8, not 10.')">80 MB/s</button>
+            <button class="opt" onclick="check(this, true, 'Correct! 800 divided by 8 equals 100.')">100 MB/s</button>
+            <button class="opt" onclick="check(this, false, 'Mbps and MB/s are different units.')">800 MB/s</button>
         </div>
 
-        <div class="question">4. What is "Volatile" memory?</div>
+        <div class="question">4. What is the primary difference between a CPU and a GPU in the context of AI?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, true, 'Correct! Like a whiteboard, it wipes clean when the power goes out.')">Memory that is lost when the power goes out.</button>
-            <button class="opt" onclick="check(this, false, 'That is Non-Volatile.')">Memory that is permanent.</button>
-            <button class="opt" onclick="check(this, false, 'That would be a broken chip!')">Memory that explodes if you drop the computer.</button>
+            <button class="opt" onclick="check(this, false, 'Both can be used, but one is much better for AI.')">A CPU is for AI and a GPU is only for video games.</button>
+            <button class="opt" onclick="check(this, true, 'Correct! Parallelism is ideal for AI tasks.')">A GPU uses high parallelism, which turned out to be ideal for AI.</button>
+            <button class="opt" onclick="check(this, false, 'GPUs are actually Application-Specific Integrated Circuits (ASICs).')">A GPU is general purpose, while a CPU is special purpose.</button>
         </div>
 
-        <div class="question">5. How does Disney use IoT for "Strategic Planning"?</div>
+        <div class="question">5. Which concept explains why we now have "smart" lightbulbs and wearable trackers?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, false, 'That\'s just cost reduction, not strategic planning.')">By making plastic bands cheaper to produce.</button>
-            <button class="opt" onclick="check(this, true, 'Correct! Real-time data allows for better crowd and inventory management.')">By using guest location data to manage crowds and increase spending.</button>
-            <button class="opt" onclick="check(this, false, 'Quantum is for massive math, not theme parks yet.')">By using Quantum Computing to predict the weather.</button>
+            <button class="opt" onclick="check(this, true, 'Correct! Cheap chips create new uses.')">High Price Elasticity: as power gets cheaper, we find new ways to use it.</button>
+            <button class="opt" onclick="check(this, false, 'Latency is about delay, not the creation of new products.')">Low Latency: lightbulbs need to respond instantly.</button>
+            <button class="opt" onclick="check(this, false, 'Non-volatile storage is just a feature, not the driver of the IoT.')">Non-volatile storage: lightbulbs need to remember their settings.</button>
         </div>
     </div>
 </div>
 
 <script>
     function check(btn, isCorrect, message) {
-        // Reset other buttons in the same group
         const parent = btn.parentElement;
         const buttons = parent.querySelectorAll('.opt');
         buttons.forEach(b => {
