@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 6 Study Guide: Moore's Law & The Tech Engine</title>
+    <title>Chapter 6 Study Guide: Moore's Law and The Tech Engine</title>
     <style>
         :root {
             --primary: #2563eb;
@@ -17,18 +17,14 @@
         .card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
         h1 { color: var(--secondary); font-size: 2.2rem; border-bottom: 4px solid var(--primary); display: inline-block; margin-bottom: 30px; }
         h2 { color: var(--primary); margin-top: 40px; font-size: 1.5rem; display: flex; align-items: center; }
-        .highlight { color: var(--secondary); font-weight: 700; background: #e0e7ff; padding: 2px 6px; border-radius: 4px; }
         
-        /* Analogy Box */
         .analogy { background: #fffbeb; border: 1px solid #fef3c7; padding: 25px; border-radius: 12px; margin: 20px 0; }
         .analogy h3 { margin-top: 0; color: #92400e; }
 
-        /* Ecosystem List */
         .stack { list-style: none; padding: 0; }
         .stack-item { background: #f1f5f9; margin-bottom: 8px; padding: 12px 20px; border-radius: 8px; border-left: 5px solid #cbd5e1; transition: 0.2s; }
         .stack-item:hover { transform: translateX(10px); border-left-color: var(--primary); }
         
-        /* Interactive Quiz */
         .quiz-section { margin-top: 50px; background: var(--secondary); color: white; padding: 30px; border-radius: 12px; }
         .question { font-size: 1.1rem; margin-bottom: 15px; color: #f8fafc; font-weight: 600; }
         .options { display: grid; gap: 10px; margin-bottom: 30px; }
@@ -37,75 +33,74 @@
         .correct { background: var(--success) !important; border-color: var(--success); }
         .wrong { background: var(--error) !important; border-color: var(--error); }
         
-        .source-tag { font-size: 0.85rem; color: #64748b; text-decoration: none; font-weight: 600; }
-        .source-tag:hover { color: var(--primary); text-decoration: underline; }
-
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f1f5f9; }
+        .source-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; font-weight: 600; margin-left: 5px; }
+        .source-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>Chapter 6: Moore’s Law & Hardware</h1>
+    <h1>Chapter 6: Moore’s Law and Hardware</h1>
     
-    <p>This chapter explores how <strong>Exponential Growth</strong> in hardware creates massive disruptive opportunities for managers[cite: 13, 51]. While we are hitting the physical limits of shrinking transistors, AI capabilities are now doubling every 6 months[cite: 35, 36].</p>
+    <p>This chapter explores how exponential growth in hardware creates massive disruptive opportunities for managers. While we are hitting the physical limits of shrinking transistors, AI capabilities are now doubling every 6 months.</p>
 
     <h2>1. The Core Concepts</h2>
     <ul>
-        <li><strong>Moore’s Law:</strong> Not a law of physics, but a business plan observation that the number of transistors on a chip doubles every 18 months[cite: 21, 26].</li>
-        <li><strong>Semiconductors:</strong> Materials that conduct electricity under certain conditions and inhibit it under others[cite: 90]. They are the foundation of modern electronics[cite: 93].</li>
-        <li><strong>The Fab:</strong> A multi-billion dollar facility used to manufacture chips. A single plant can cost $20+ billion and requires massive, ultra-purified water infrastructure[cite: 154, 156, 162].</li>
+        <li><strong>Moore’s Law:</strong> Not a law of physics, but a business plan observation that the number of transistors on a chip doubles every 18 months <a href="https://www.intel.com/content/www/us/en/history/museum-gordon-moore-law.html" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>Semiconductors:</strong> Materials that conduct electricity under certain conditions and inhibit it under others. They are the foundation of modern electronics <a href="https://www.investopedia.com/terms/s/semiconductor.asp" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>The Fab:</strong> A multi billion dollar facility used to manufacture chips. A single plant can cost 20 billion dollars and requires massive, ultra purified water infrastructure <a href="https://www.reuters.com/technology/inside-new-chip-factories-chasing-moores-law-2021-10-14/" class="source-link" target="_blank">[source]</a>.</li>
     </ul>
 
     <div class="analogy">
         <h3>🍳 How a Computer Works: The Data Kitchen</h3>
-        <p>Think of your hardware as a workspace[cite: 75]:</p>
+        <p>Think of your hardware as a workspace:</p>
         <ul>
-            <li><strong>CPU (The Chef):</strong> Runs the computer using software "recipes"[cite: 76, 81].</li>
-            <li><strong>Main Memory (The Workspace):</strong> RAM is the immediate space where the chef works. It is <strong>Volatile</strong> (wipes clean when power is lost)[cite: 77, 79].</li>
-            <li><strong>Storage (The Pantry):</strong> Where recipes and data are kept long-term. It is <strong>Non-Volatile</strong>[cite: 77, 80].</li>
-            <li><strong>I/O Devices (Receiving/Shipping):</strong> How data enters or leaves the kitchen (keyboards, monitors)[cite: 78, 85].</li>
+            <li><strong>CPU (The Chef):</strong> Runs the computer using software recipes.</li>
+            <li><strong>Main Memory (The Workspace):</strong> RAM is the immediate space where the chef works. It is <strong>Volatile</strong> meaning it wipes clean when power is lost <a href="https://www.techtarget.com/whatis/definition/volatile-memory" class="source-link" target="_blank">[source]</a>.</li>
+            <li><strong>Storage (The Pantry):</strong> Where recipes and data are kept long term. It is <strong>Non Volatile</strong> <a href="https://www.sciencedirect.com/topics/computer-science/non-volatile-storage" class="source-link" target="_blank">[source]</a>.</li>
+            <li><strong>I/O Devices (Receiving/Shipping):</strong> How data enters or leaves the kitchen such as keyboards and monitors.</li>
         </ul>
-            </div>
+    </div>
 
     <h2>2. Konana’s Software Ecosystem</h2>
-    <p>Strategic decisions must consider <strong>ecosystem entrenchment</strong>. Because each layer depends on the ones below it, this creates "Lock-in" or high switching costs[cite: 61, 63, 70, 72].</p>
+    <p>Strategic decisions must consider ecosystem entrenchment. Because each layer depends on the ones beneath it, this creates lock in or high switching costs <a href="https://hbr.org/2006/06/the-ecosystem-of-shared-value" class="source-link" target="_blank">[source]</a>.</p>
+    
+    
+    
     <div class="stack">
-        <div class="stack-item"><strong>Layer 6: Consumer Applications</strong> (Apps you use daily) [cite: 69]</div>
-        <div class="stack-item"><strong>Layer 5: Enterprise Applications</strong> (Large scale business software) [cite: 68]</div>
-        <div class="stack-item"><strong>Layer 4: Middleware</strong> (The software that connects apps) [cite: 67]</div>
-        <div class="stack-item:"><strong>Layer 3: DBMS</strong> (The Database Management System) [cite: 66]</div>
-        <div class="stack-item"><strong>Layer 2: Operating System</strong> (The hardware manager) [cite: 65]</div>
-        <div class="stack-item"><strong>Layer 1: Hardware</strong> (The physical foundation) [cite: 64]</div>
+        <div class="stack-item"><strong>Layer 6: Consumer Applications</strong> (Apps you use daily)</div>
+        <div class="stack-item"><strong>Layer 5: Enterprise Applications</strong> (Large scale business software)</div>
+        <div class="stack-item"><strong>Layer 4: Middleware</strong> (The software that connects apps)</div>
+        <div class="stack-item"><strong>Layer 3: DBMS</strong> (The Database Management System)</div>
+        <div class="stack-item"><strong>Layer 2: Operating System</strong> (The hardware manager)</div>
+        <div class="stack-item"><strong>Layer 1: Hardware</strong> (The physical foundation)</div>
     </div>
 
     <h2>3. Capacity vs. Transfer Speed</h2>
-    <p><strong>The Golden Rule:</strong> 8 bits = 1 byte[cite: 249].</p>
+    <p><strong>The Golden Rule:</strong> 8 bits = 1 byte.</p>
     <ul>
-        <li><strong>Storage:</strong> Measured in Bytes (Capital B). Example: 1 Gigabyte (GB) is one billion bytes[cite: 134, 135, 250].</li>
-        <li><strong>Transfer:</strong> Measured in bits (lowercase b). Internet speeds are Megabits per second (Mbps)[cite: 251, 252].</li>
-        <li><strong>The "Gotcha":</strong> Your download speed in Megabytes will always look 8 times smaller than the Megabits your ISP promised[cite: 254, 255].</li>
+        <li><strong>Storage:</strong> Measured in Bytes with a Capital B. Example: 1 Gigabyte is one billion bytes <a href="https://www.gbmb.org/gb-to-bytes" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>Transfer:</strong> Measured in bits with a lowercase b. Internet speeds are Megabits per second <a href="https://www.verizon.com/info/internet-speed-numbers/" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>The Gotcha:</strong> Your download speed in Megabytes will always look 8 times smaller than the Megabits your ISP promised.</li>
     </ul>
 
     <h2>4. Bandwidth vs. Latency</h2>
     <ul>
-        <li><strong>Bandwidth:</strong> Think of this as the number of lanes on a highway. More lanes = more data at once[cite: 264, 265].</li>
-        <li><strong>Latency:</strong> Think of this as the speed limit or delay. It is the time it takes for a single "car" to get from A to B[cite: 266].</li>
-        <li><strong>Management Rule:</strong> Video streaming needs high bandwidth, but online gaming and Instapolls require low latency (speed of response)[cite: 280, 281, 282].</li>
+        <li><strong>Bandwidth:</strong> Think of this as the number of lanes on a highway. More lanes equals more data at once <a href="https://www.techtarget.com/searchnetworking/definition/bandwidth" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>Latency:</strong> Think of this as the speed limit or delay. It is the time it takes for a single car to get from A to B <a href="https://www.cloudflare.com/learning/performance/glossary/what-is-latency/" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>Management Rule:</strong> Video streaming needs high bandwidth, but online gaming and Instapolls require low latency.</li>
     </ul>
 
     <h2>5. Disney’s Big Data Strategy</h2>
-    <p>Disney used IoT (MagicBands) to solve complex operational problems[cite: 393]:</p>
+    <p>Disney used IoT via MagicBands to solve complex operational problems:</p>
     <ul>
-        <li><strong>Operational Efficiency:</strong> They cut turnstile transaction time by 30%[cite: 431].</li>
-        <li><strong>Staffing:</strong> Data tells them exactly how many costumed characters or staff are needed in different parts of the park[cite: 429, 430].</li>
-        <li><strong>Capacity:</strong> They can now serve 3,000 to 5,000 additional guests per day because of efficient scheduling algorithms[cite: 423, 432].</li>
+        <li><strong>Operational Efficiency:</strong> They cut turnstile transaction time by 30 percent <a href="https://www.nytimes.com/2015/03/11/business/media/at-disney-parks-a-bracelet-is-the-key-to-a-frictionless-world.html" class="source-link" target="_blank">[source]</a>.</li>
+        <li><strong>Staffing:</strong> Data tells them exactly how many costumed characters or staff are needed in different parts of the park.</li>
+        <li><strong>Capacity:</strong> They can serve 3,000 to 5,000 additional guests per day because of efficient scheduling algorithms.</li>
     </ul>
 
     <div class="quiz-section">
-        <h2>Interactive Self-Check</h2>
+        <h2>Interactive Self Check</h2>
         <div class="question">1. Which of the following is measured in bits (lowercase b) rather than Bytes?</div>
         <div class="options">
             <button class="opt" onclick="check(this, false, 'Storage is measured in Bytes.')">The size of a DVD movie</button>
@@ -113,14 +108,14 @@
             <button class="opt" onclick="check(this, false, 'Files on a hard drive use Bytes.')">A photo file size</button>
         </div>
 
-        <div class="question">2. Why does Konana’s Ecosystem model create "switching costs"?</div>
+        <div class="question">2. Why does Konana’s Ecosystem model create switching costs?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, true, 'Correct! Because layers depend on those beneath them, changing one often requires changing all of them.')">Because each layer depends on the one beneath it, creating lock-in.</button>
+            <button class="opt" onclick="check(this, true, 'Correct! Because layers depend on those beneath them, changing one often requires changing all of them.')">Because each layer depends on the one beneath it, creating lock in.</button>
             <button class="opt" onclick="check(this, false, 'Moore\'s Law affects price, but the ecosystem affects compatibility.')">Because hardware is getting more expensive due to Moore\'s Law.</button>
-            <button class="opt" onclick="check(this, false, 'Switching costs are about software/hardware dependency, not eWaste.')">Because it is illegal to throw away old software.</button>
+            <button class="opt" onclick="check(this, false, 'Switching costs are about software/hardware dependency.')">Because it is illegal to throw away old software.</button>
         </div>
 
-        <div class="question">3. If your Internet Service Provider (ISP) promises 800 Mbps, what is your maximum actual download speed in Megabytes?</div>
+        <div class="question">3. If your Internet Service Provider promises 800 Mbps, what is your maximum actual download speed in Megabytes?</div>
         <div class="options">
             <button class="opt" onclick="check(this, false, 'You must divide by 8, not 10.')">80 MB/s</button>
             <button class="opt" onclick="check(this, true, 'Correct! 800 divided by 8 equals 100.')">100 MB/s</button>
@@ -129,16 +124,16 @@
 
         <div class="question">4. What is the primary difference between a CPU and a GPU in the context of AI?</div>
         <div class="options">
-            <button class="opt" onclick="check(this, false, 'Both can be used, but one is much better for AI.')">A CPU is for AI and a GPU is only for video games.</button>
+            <button class="opt" onclick="check(this, false, 'Both can be used, but one is specialized for parallelism.')">A CPU is for AI and a GPU is only for video games.</button>
             <button class="opt" onclick="check(this, true, 'Correct! Parallelism is ideal for AI tasks.')">A GPU uses high parallelism, which turned out to be ideal for AI.</button>
-            <button class="opt" onclick="check(this, false, 'GPUs are actually Application-Specific Integrated Circuits (ASICs).')">A GPU is general purpose, while a CPU is special purpose.</button>
+            <button class="opt" onclick="check(this, false, 'GPUs are actually Application Specific Integrated Circuits.')">A GPU is general purpose, while a CPU is special purpose.</button>
         </div>
 
-        <div class="question">5. Which concept explains why we now have "smart" lightbulbs and wearable trackers?</div>
+        <div class="question">5. Which concept explains why we now have smart lightbulbs and wearable trackers?</div>
         <div class="options">
             <button class="opt" onclick="check(this, true, 'Correct! Cheap chips create new uses.')">High Price Elasticity: as power gets cheaper, we find new ways to use it.</button>
             <button class="opt" onclick="check(this, false, 'Latency is about delay, not the creation of new products.')">Low Latency: lightbulbs need to respond instantly.</button>
-            <button class="opt" onclick="check(this, false, 'Non-volatile storage is just a feature, not the driver of the IoT.')">Non-volatile storage: lightbulbs need to remember their settings.</button>
+            <button class="opt" onclick="check(this, false, 'Non volatile storage is just a feature.')">Non volatile storage: lightbulbs need to remember their settings.</button>
         </div>
     </div>
 </div>
